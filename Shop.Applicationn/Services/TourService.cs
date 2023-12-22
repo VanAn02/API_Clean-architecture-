@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Shop.Applicationn.Services
 {
-    public class TourService:ITourService
+    public class TourService : ITourService
     {
         private readonly ITourRepo _ITourRepo;
         private readonly IMapper _mapper;
@@ -32,13 +32,35 @@ namespace Shop.Applicationn.Services
         {
             return _ITourRepo.Add(_mapper.Map<Tour>(TourDto));
         }
-        public bool Update(TourDto TourDto)
-        {
-            return _ITourRepo.Update(_mapper.Map<Tour>(TourDto));
-        }
         public bool Delete(int id)
         {
             return _ITourRepo.Delete(id);
         }
+        public bool Update(TourDto tour)
+        {
+            try
+            {
+                var existingEntity = _ITourRepo.Get(tour.TourId);
+
+                if (existingEntity != null)
+                {
+                    _mapper.Map(tour, existingEntity);
+
+                    _ITourRepo.Update(existingEntity);
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+
+            }
+        }
     }
 }
+

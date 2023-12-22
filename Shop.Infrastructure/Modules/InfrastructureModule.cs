@@ -17,6 +17,8 @@ namespace Shop.Infrastructure.Modules
             services.AddScoped<IBaiVietRepo, BaiVietRepo>();
             services.AddScoped<ITourRepo,TourRepo>();
             services.AddScoped<IDatTourRepo, DatTourRepo>();
+            services.AddScoped<IHoaDonRepo, HoaDonRepo>();
+            services.AddScoped<IChiTietHoaDonRepo, ChiTietHoaDonRepo>();
             return services;
         }    
     }

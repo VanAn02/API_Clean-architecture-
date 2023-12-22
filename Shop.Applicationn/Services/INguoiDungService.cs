@@ -11,8 +11,9 @@ namespace Shop.Applicationn.Services
     {
         List<NguoiDungDto> GetAll();
         NguoiDungDto Get(int id);
-        bool Add(NguoiDungDto nguoiDungDto);
-        bool Update(NguoiDungDto nguoiDungDto);
+        bool Register(NguoiDungDto nguoidung);
+        bool Create(NguoiDungDto nguoidung);
         bool Delete(int id);
+        bool Update(NguoiDungDto nguoidung);
     }
 }

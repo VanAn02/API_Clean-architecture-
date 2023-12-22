@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AzKTTVxxCN3SC1ot5CNRLeyi6yvaIZFZUzZXkzpQSOVhsM0LozSTzTgW3ZTb8ttzr2cvmQvx3Hss91/CIhAh1g==",
+  "dgSpecHash": "aiYTJJbMiRM16sl+BzGbXp0SjR4WwotclzxHG6nddXe763QTLYl4GDHxMkQaT62nELbN3633ouqKv8PJTjp0TA==",
   "success": true,
-  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Applicationn\\Shop.Applicationn.csproj",
+  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -26,6 +26,9 @@ namespace Shop.Applicationn.Modules
             services.AddScoped<IDatTourService, DatTourService>();
             services.AddScoped<ITourService, TourService>();
             services.AddScoped<INguoiDungService, NguoiDungService>();
+            services.AddScoped<IHoaDonService, HoaDonService>();
+            services.AddScoped<IChiTietHoaDonService, ChiTietHoaDonService>();
+            //services.AddScoped<IEmailService, EmailService>();
             return services;
         }    
     }

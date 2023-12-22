@@ -2034,11 +2034,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
+      "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
       "projectName": "Shop.Infrastructure",
-      "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
+      "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Infrastructure\\obj\\",
+      "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2055,8 +2055,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj": {
-              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\onion_architecture\\Shop.Domain\\Shop.Domain.csproj"
+            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {
+              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj"
             }
           }
         }

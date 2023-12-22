@@ -15,5 +15,7 @@ namespace Shop.Applicationn.Services
         bool Add(DatTourDto datTourDto);
         bool Update(DatTourDto datTourDto);
         bool Delete(int id);
+        //IEnumerable<DatTourDto> getOrderbyUserId(int iduser);
+
     }
 }

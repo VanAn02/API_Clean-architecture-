@@ -8,12 +8,14 @@ namespace Shop.Applicationn.Dto
 {
     public class NguoiDungDto
     {
-        public int Id { get; set; }
-        public string? TenDangNhap { get; set; }
-        public string? Avartar { get; set; }
-        public string? MatKhau { get; set; }
-        public string? HoTen { get; set; }
-        public string? Email { get; set; }
-        public string? SoDienThoai { get; set; }
+        public int NguoiDungId { get; set; }
+        public string? NguoiDungHinhAnh { get; set; }
+        public string? HoVaTen { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string? DiaChi { get; set; }
+        public string? Sdt { get; set; }
+        public string? Quyen { get; set; }
+
     }
 }

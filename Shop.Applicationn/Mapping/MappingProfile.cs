@@ -18,6 +18,9 @@ namespace Shop.Applicationn.Mapping
             CreateMap<BaiViet,BaiVietDto>().ReverseMap();
             CreateMap<Tour,TourDto>().ReverseMap();
             CreateMap<DatTour, DatTourDto>().ReverseMap();
+            CreateMap<HoaDon, HoaDonDto>().ReverseMap();
+            CreateMap<ChiTietHoaDon, ChiTietHoaDonDto>().ReverseMap();
+            CreateMap<EmailDto, EmailDto>().ReverseMap();
         }
     }
 }

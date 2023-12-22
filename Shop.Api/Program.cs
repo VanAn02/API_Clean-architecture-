@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using CloudinaryDotNet;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -52,7 +53,7 @@ builder.Services.AddSwaggerGen(c =>
         });
 });
 builder.Services.AddDbContext<ShopDbContext>(option =>
-option.UseSqlServer(builder.Configuration.GetConnectionString("Myconn")));
+option.UseSqlServer(builder.Configuration.GetConnectionString("Travel-Tour")));
 
 
 
@@ -81,8 +82,20 @@ builder.Services.AddAuthentication(options =>
 });
 
 
+//Cloudinary
+IConfiguration configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json")
+    .Build();
 
-
+var cloudinaryAccount = new Account(
+    configuration["Cloudinary:CloudName"],
+    configuration["Cloudinary:ApiKey"],
+    configuration["Cloudinary:ApiSecret"]
+);
+builder.Services.AddControllersWithViews();
+var cloudinary = new Cloudinary(cloudinaryAccount);
+builder.Services.AddSingleton(cloudinary);
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -90,7 +103,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 

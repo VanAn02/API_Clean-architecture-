@@ -2,6 +2,7 @@
 using Shop.Applicationn.Dto;
 using Shop.Domain.Entities;
 using Shop.Domain.Repositories;
+using Shop.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,27 @@ namespace Shop.Applicationn.Services
         }
         public bool Update(BaiVietDto BaiVietDto)
         {
-            return _baivietRepo.Update(_mapper.Map<BaiViet>(BaiVietDto));
+            try
+            {
+                var existingEntity = _baivietRepo.Get(BaiVietDto.BaiVietId);
+
+                if (existingEntity != null)
+                {
+                    _mapper.Map(BaiVietDto, existingEntity);
+
+                    _baivietRepo.Update(existingEntity);
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public bool Delete(int id)
         {

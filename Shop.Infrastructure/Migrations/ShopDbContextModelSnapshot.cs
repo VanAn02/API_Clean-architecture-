@@ -24,11 +24,15 @@ namespace Shop.Infrastructure.Migrations
 
             modelBuilder.Entity("Shop.Domain.Entities.BaiViet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BaiVietId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BaiVietId"), 1L, 1);
+
+                    b.Property<string>("AnhBaiViet")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("NgayDang")
                         .HasColumnType("datetime2");
@@ -45,28 +49,58 @@ namespace Shop.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("Id");
+                    b.HasKey("BaiVietId");
 
                     b.HasIndex("NguoiDungId");
 
                     b.ToTable("BaiViet", (string)null);
                 });
 
-            modelBuilder.Entity("Shop.Domain.Entities.DatTour", b =>
+            modelBuilder.Entity("Shop.Domain.Entities.ChiTietHoaDon", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ChiTietHoaDontId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ChiTietHoaDontId"), 1L, 1);
+
+                    b.Property<int>("HoaDonId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SanPhamId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
+                    b.HasKey("ChiTietHoaDontId");
+
+                    b.HasIndex("HoaDonId");
+
+                    b.ToTable("ChiTietHoaDon", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.DatTour", b =>
+                {
+                    b.Property<int>("DatTourId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DatTourId"), 1L, 1);
+
+                    b.Property<decimal>("DonGia")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("NguoiDungId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
                     b.Property<int>("TourId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("DatTourId");
 
                     b.HasIndex("NguoiDungId");
 
@@ -75,56 +109,92 @@ namespace Shop.Infrastructure.Migrations
                     b.ToTable("DatTour", (string)null);
                 });
 
-            modelBuilder.Entity("Shop.Domain.Entities.NguoiDung", b =>
+            modelBuilder.Entity("Shop.Domain.Entities.HoaDon", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("HoaDonId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HoaDonId"), 1L, 1);
 
-                    b.Property<string>("Avartar")
+                    b.Property<string>("HoaDonSdt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NgayTao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NguoiDungId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TongTien")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("TrangThai")
+                        .HasColumnType("int");
+
+                    b.HasKey("HoaDonId");
+
+                    b.HasIndex("NguoiDungId");
+
+                    b.ToTable("HoaDon", (string)null);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.NguoiDung", b =>
+                {
+                    b.Property<int>("NguoiDungId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NguoiDungId"), 1L, 1);
+
+                    b.Property<string>("DiaChi")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HoTen")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MatKhau")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SoDienThoai")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenDangNhap")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("HoVaTen")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NguoiDungHinhAnh")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quyen")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sdt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NguoiDungId");
 
                     b.ToTable("NguoiDung", (string)null);
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.Tour", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("TourId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TourId"), 1L, 1);
 
                     b.Property<string>("AnhTour")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DiaDiem")
+                    b.Property<string>("Gia")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Gia")
+                    b.Property<string>("KhachSan")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -153,7 +223,7 @@ namespace Shop.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("TourId");
 
                     b.ToTable("Tour", (string)null);
                 });
@@ -166,6 +236,23 @@ namespace Shop.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("NguoiDung");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.ChiTietHoaDon", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.HoaDon", "HoaDon")
+                        .WithMany("ChiTietHoaDon")
+                        .HasForeignKey("HoaDonId")
+                        .IsRequired();
+
+                    b.HasOne("Shop.Domain.Entities.Tour", "Tour")
+                        .WithMany("ChiTietHoaDons")
+                        .HasForeignKey("HoaDonId")
+                        .IsRequired();
+
+                    b.Navigation("HoaDon");
+
+                    b.Navigation("Tour");
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.DatTour", b =>
@@ -185,15 +272,34 @@ namespace Shop.Infrastructure.Migrations
                     b.Navigation("Tour");
                 });
 
+            modelBuilder.Entity("Shop.Domain.Entities.HoaDon", b =>
+                {
+                    b.HasOne("Shop.Domain.Entities.NguoiDung", "NguoiDung")
+                        .WithMany("HoaDons")
+                        .HasForeignKey("NguoiDungId")
+                        .IsRequired();
+
+                    b.Navigation("NguoiDung");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Entities.HoaDon", b =>
+                {
+                    b.Navigation("ChiTietHoaDon");
+                });
+
             modelBuilder.Entity("Shop.Domain.Entities.NguoiDung", b =>
                 {
                     b.Navigation("BaiViets");
 
                     b.Navigation("DatTours");
+
+                    b.Navigation("HoaDons");
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.Tour", b =>
                 {
+                    b.Navigation("ChiTietHoaDons");
+
                     b.Navigation("DatTours");
                 });
 #pragma warning restore 612, 618

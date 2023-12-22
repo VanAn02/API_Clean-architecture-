@@ -10,34 +10,64 @@ using System.Threading.Tasks;
 
 namespace Shop.Applicationn.Services
 {
-    public class NguoiDungService:INguoiDungService
+    public class NguoiDungService : INguoiDungService
     {
-        private readonly INguoiDungRepo _nguoidungRepo;
+        private readonly INguoiDungRepo _nguoiDungRepo;
         private readonly IMapper _mapper;
-        public NguoiDungService(INguoiDungRepo NguoiDungRepo, IMapper mapper)
+        public NguoiDungService(INguoiDungRepo nguoiDungRepo, IMapper mapper)
         {
-            _nguoidungRepo = NguoiDungRepo;
+            _nguoiDungRepo = nguoiDungRepo;
             _mapper = mapper;
         }
-        public List<NguoiDungDto> GetAll()
+
+        public bool Create(NguoiDungDto nguoidung)
         {
-            return _mapper.Map<List<NguoiDungDto>>(_nguoidungRepo.GetAll());
+            return _nguoiDungRepo.Add(_mapper.Map<NguoiDung>(nguoidung));
         }
-        public NguoiDungDto Get(int id)
-        {
-            return _mapper.Map<NguoiDungDto>(_nguoidungRepo.Get(id));
-        }
-        public bool Add(NguoiDungDto NguoiDungDto)
-        {
-            return _nguoidungRepo.Add(_mapper.Map<NguoiDung>(NguoiDungDto));
-        }
-        public bool Update(NguoiDungDto NguoiDungDto)
-        {
-            return _nguoidungRepo.Update(_mapper.Map<NguoiDung>(NguoiDungDto));
-        }
+
         public bool Delete(int id)
         {
-            return _nguoidungRepo.Delete(id);
+            return _nguoiDungRepo.Delete(id);
+        }
+
+        public NguoiDungDto Get(int id)
+        {
+            return _mapper.Map<NguoiDungDto>(_nguoiDungRepo.Get(id));
+        }
+
+        public List<NguoiDungDto> GetAll()
+        {
+            return _mapper.Map<List<NguoiDungDto>>(_nguoiDungRepo.GetAll());
+        }
+
+        public bool Register(NguoiDungDto nguoidung)
+        {
+            return _nguoiDungRepo.Add(_mapper.Map<NguoiDung>(nguoidung));
+        }
+
+        public bool Update(NguoiDungDto nguoidung)
+        {
+            try
+            {
+                var existingEntity = _nguoiDungRepo.Get(nguoidung.NguoiDungId);
+
+                if (existingEntity != null)
+                {
+                    _mapper.Map(nguoidung, existingEntity);
+
+                    _nguoiDungRepo.Update(existingEntity);
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }
