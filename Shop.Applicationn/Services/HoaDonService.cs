@@ -39,5 +39,10 @@ namespace Shop.Applicationn.Services
         {
             return _hoadonRepo.Delete(id);
         }
+
+        public List<HoaDonDto> GetById(int id)
+        {
+            return _mapper.Map<List<HoaDonDto>>(_hoadonRepo.GetAll().Where(x=>x.NguoiDungId==id));
+        }
     }
 }

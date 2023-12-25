@@ -10,6 +10,7 @@ namespace Shop.Applicationn.Services
     public interface IChiTietHoaDonService
     {
         List<ChiTietHoaDonDto> GetAll();
+        IEnumerable<DetailHoaDon> GetByIdHoaDon(int id);
         ChiTietHoaDonDto Get(int id);
         bool Add(ChiTietHoaDonDto chitiethoadon);
         bool Update(ChiTietHoaDonDto chitiethoadon);

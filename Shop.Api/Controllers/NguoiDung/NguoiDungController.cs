@@ -103,7 +103,8 @@ namespace Shop.Api.Controllers.NguoiDungController
                 return Ok(new
                 {
                     message = "Đăng nhập thành công",
-                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    quyen=user.Quyen
                 });
             }
             return BadRequest("Tài khoản hoặc mật khẩu không chính xác");

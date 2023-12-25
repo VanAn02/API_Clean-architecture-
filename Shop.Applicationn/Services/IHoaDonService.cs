@@ -14,5 +14,7 @@ namespace Shop.Applicationn.Services
         bool Add(HoaDonDto hoadon);
         bool Update(HoaDonDto hoadon);
         bool Delete(int id);
+        List<HoaDonDto> GetById(int id);
+
     }
 }

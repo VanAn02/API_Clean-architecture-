@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Shop.Applicationn.Dto;
 using Shop.Domain.Entities;
 using Shop.Domain.Repositories;
@@ -61,6 +62,35 @@ namespace Shop.Applicationn.Services
 
             }
         }
+
+        public List<TourDto> GetByMien(string value)
+        {
+            return _mapper.Map<List<TourDto>>(_ITourRepo.GetAll().Where(x=>x.KhuVuc==value));
+        }
+
+        public List<TourDto> Search(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return _mapper.Map<List<TourDto>>(_ITourRepo.GetAll());
+            }
+            else
+            {
+                var search = value.Trim().ToLower();
+                var query = _ITourRepo.GetAll()
+                    .Where(tour =>
+                        tour.Gia.ToLower().Contains(search) ||
+                        tour.KhachSan.ToLower().Contains(search) ||
+                        tour.KhoiHanh.ToLower().Contains(search) ||
+                        tour.KhuVuc.ToLower().Contains(search) ||
+                        tour.TenTour.ToLower().Contains(search) ||
+                        tour.PhuongTien.ToLower().Contains(search) ||
+                        tour.ThoiGian.ToLower().Contains(search)
+                    );
+                return _mapper.Map<List<TourDto>>(query.ToList());
+            }
+        }
+
     }
 }
 

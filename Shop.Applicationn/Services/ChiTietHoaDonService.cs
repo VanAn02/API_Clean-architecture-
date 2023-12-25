@@ -13,11 +13,13 @@ namespace Shop.Applicationn.Services
     public class ChiTietHoaDonService : IChiTietHoaDonService
     {
         private readonly IChiTietHoaDonRepo _chitiethoadonRepo;
+        private readonly ITourRepo _TourRepo;
         private readonly IMapper _mapper;
-        public ChiTietHoaDonService(IChiTietHoaDonRepo chitiethoadonRepo, IMapper mapper)
+        public ChiTietHoaDonService(IChiTietHoaDonRepo chitiethoadonRepo, IMapper mapper, ITourRepo tourrepo)
         {
             _chitiethoadonRepo = chitiethoadonRepo;
             _mapper = mapper;
+            _TourRepo= tourrepo;
         }
         public List<ChiTietHoaDonDto> GetAll()
         {
@@ -38,6 +40,19 @@ namespace Shop.Applicationn.Services
         public bool Delete(int id)
         {
             return _chitiethoadonRepo.Delete(id);
+        }
+        public IEnumerable<DetailHoaDon> GetByIdHoaDon(int id)
+        {
+            var query=from CHiTietHoaDon in _chitiethoadonRepo.GetAll().Where(x=>x.HoaDonId==id).ToList()
+                      join Tourtbl in _TourRepo.GetAll().ToList() on CHiTietHoaDon.TourId equals Tourtbl.TourId
+                      select new DetailHoaDon
+                      {
+                          Anh=Tourtbl.AnhTour,
+                          Gia=Int32.Parse(CHiTietHoaDon.Gia),
+                          SoLuong= CHiTietHoaDon.SoLuong,
+                          TenTour=Tourtbl.TenTour,
+                      };
+            return query.ToList();
         }
     }
 

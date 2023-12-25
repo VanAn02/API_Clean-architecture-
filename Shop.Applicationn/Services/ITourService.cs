@@ -14,5 +14,7 @@ namespace Shop.Applicationn.Services
         bool Add(TourDto TourDto);
         bool Update(TourDto TourDto);
         bool Delete(int id);
+        List<TourDto> GetByMien(string value);
+        List<TourDto> Search(string value);
     }
 }

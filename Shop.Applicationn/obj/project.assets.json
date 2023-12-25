@@ -2012,11 +2012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
+      "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
       "projectName": "Shop.Applicationn",
-      "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
+      "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Applicationn\\obj\\",
+      "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Applicationn\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2033,11 +2033,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {
-              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj"
+            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {
+              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj"
             },
-            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj": {
-              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj"
+            "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj": {
+              "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj"
             }
           }
         }

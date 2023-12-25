@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Shop.Applicationn.Services;
+using Shop.Infrastructure.Repositories;
 
 namespace Shop.Api.Controllers.ChiTietHoaDon
 {
@@ -6,10 +8,16 @@ namespace Shop.Api.Controllers.ChiTietHoaDon
     [ApiController]
     public class ChiTietHoaDonController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
+        private IChiTietHoaDonService repo;
+        public ChiTietHoaDonController(IChiTietHoaDonService rPO)
         {
-            return Ok("OK");
+            this.repo=rPO;
+        }
+        [HttpGet]
+        public IActionResult GetByIdHoDon(int id)
+        {
+            return Ok(repo.GetByIdHoaDon(id));
+
         }
     }
 }

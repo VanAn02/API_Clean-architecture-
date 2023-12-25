@@ -99,5 +99,15 @@ namespace Shop.Api.Controllers.TourController
             }
             return NotFound("Không thể xóa vì tour này không tồn tại");
         }
+        [HttpGet("getbyMien")]
+        public IActionResult GetByMien(string value)
+        {
+            return Ok(_tourService.GetByMien(value));
+        }
+        [HttpGet("Search/{search}")]
+        public IActionResult Search(string search)
+        {
+            return Ok(_tourService.Search(search));
+        }
     }
 }

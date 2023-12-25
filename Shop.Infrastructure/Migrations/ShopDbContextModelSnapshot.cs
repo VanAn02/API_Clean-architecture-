@@ -64,34 +64,11 @@ namespace Shop.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ChiTietHoaDontId"), 1L, 1);
 
+                    b.Property<string>("Gia")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("HoaDonId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SanPhamId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SoLuong")
-                        .HasColumnType("int");
-
-                    b.HasKey("ChiTietHoaDontId");
-
-                    b.HasIndex("HoaDonId");
-
-                    b.ToTable("ChiTietHoaDon", (string)null);
-                });
-
-            modelBuilder.Entity("Shop.Domain.Entities.DatTour", b =>
-                {
-                    b.Property<int>("DatTourId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DatTourId"), 1L, 1);
-
-                    b.Property<decimal>("DonGia")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("NguoiDungId")
                         .HasColumnType("int");
 
                     b.Property<int>("SoLuong")
@@ -100,13 +77,13 @@ namespace Shop.Infrastructure.Migrations
                     b.Property<int>("TourId")
                         .HasColumnType("int");
 
-                    b.HasKey("DatTourId");
+                    b.HasKey("ChiTietHoaDontId");
 
-                    b.HasIndex("NguoiDungId");
+                    b.HasIndex("HoaDonId");
 
                     b.HasIndex("TourId");
 
-                    b.ToTable("DatTour", (string)null);
+                    b.ToTable("ChiTietHoaDon", (string)null);
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.HoaDon", b =>
@@ -116,6 +93,18 @@ namespace Shop.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HoaDonId"), 1L, 1);
+
+                    b.Property<string>("DiaChi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GhiChu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HoVaTen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HoaDonSdt")
                         .IsRequired()
@@ -128,8 +117,9 @@ namespace Shop.Infrastructure.Migrations
                     b.Property<int>("NguoiDungId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TongTien")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("TongTien")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
@@ -247,27 +237,10 @@ namespace Shop.Infrastructure.Migrations
 
                     b.HasOne("Shop.Domain.Entities.Tour", "Tour")
                         .WithMany("ChiTietHoaDons")
-                        .HasForeignKey("HoaDonId")
-                        .IsRequired();
-
-                    b.Navigation("HoaDon");
-
-                    b.Navigation("Tour");
-                });
-
-            modelBuilder.Entity("Shop.Domain.Entities.DatTour", b =>
-                {
-                    b.HasOne("Shop.Domain.Entities.NguoiDung", "NguoiDung")
-                        .WithMany("DatTours")
-                        .HasForeignKey("NguoiDungId")
-                        .IsRequired();
-
-                    b.HasOne("Shop.Domain.Entities.Tour", "Tour")
-                        .WithMany("DatTours")
                         .HasForeignKey("TourId")
                         .IsRequired();
 
-                    b.Navigation("NguoiDung");
+                    b.Navigation("HoaDon");
 
                     b.Navigation("Tour");
                 });
@@ -291,16 +264,12 @@ namespace Shop.Infrastructure.Migrations
                 {
                     b.Navigation("BaiViets");
 
-                    b.Navigation("DatTours");
-
                     b.Navigation("HoaDons");
                 });
 
             modelBuilder.Entity("Shop.Domain.Entities.Tour", b =>
                 {
                     b.Navigation("ChiTietHoaDons");
-
-                    b.Navigation("DatTours");
                 });
 #pragma warning restore 612, 618
         }

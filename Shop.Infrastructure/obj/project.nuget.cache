@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FhhgtECuaPlwO8rJnQx7c0tJUwNKZhbkCjyn3mjRTeut9mrGR6LO+HT6+ICk1q431SNJ79ydnoX1vkivBQKkPQ==",
+  "dgSpecHash": "/Ps1OGBOoH7VxKEQJCb8XGUu3dtMNXvwPwjVputKaW0JCCHoq44WDoXIGxOSDkUlfbIljDAveYDOQiBeig9gSw==",
   "success": true,
-  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
+  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Infrastructure\\Shop.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {}
+    "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {}
   },
   "projects": {
-    "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {
+    "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj",
+        "projectUniqueName": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj",
         "projectName": "Shop.Domain",
-        "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\Shop.Domain.csproj",
+        "projectPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\Shop.Domain.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Domain\\obj\\",
+        "outputPath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

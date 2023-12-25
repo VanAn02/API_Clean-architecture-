@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aiYTJJbMiRM16sl+BzGbXp0SjR4WwotclzxHG6nddXe763QTLYl4GDHxMkQaT62nELbN3633ouqKv8PJTjp0TA==",
+  "dgSpecHash": "SITRoTSIv5vxxD5jupwjXzGv67U//EF2aLA1Bm09mTVZdTWKXOVqu67yJVmfv1Kn9KAHh9wMm22HX/0HNoJ2dQ==",
   "success": true,
-  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
+  "projectFilePath": "D:\\LẬP TRÌNH WEB\\BAITAPLON\\TOURDULICH\\TOURDULICH\\TOURDULICH\\DbTravel\\Shop.Applicationn\\Shop.Applicationn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

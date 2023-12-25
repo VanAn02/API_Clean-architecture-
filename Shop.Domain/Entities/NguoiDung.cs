@@ -17,7 +17,7 @@ namespace Shop.Domain.Entities
         public string? Sdt { get; set; }
         public string? Quyen { get; set; }
         public virtual ICollection<BaiViet> BaiViets { get; set; }
-        public virtual ICollection<DatTour> DatTours { get; set; }
+        //public virtual ICollection<DatTour> DatTours { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

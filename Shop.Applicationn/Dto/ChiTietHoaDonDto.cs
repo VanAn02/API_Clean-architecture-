@@ -10,7 +10,8 @@ namespace Shop.Applicationn.Dto
     {
         public int ChiTietHoaDontId { get; set; }
         public int HoaDonId { get; set; }
-        public int SanPhamId { get; set; }
+        public int TourId { get; set; }
         public int SoLuong { get; set; }
+        public string Gia { get; set; }
     }
 }

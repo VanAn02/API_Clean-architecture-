@@ -44,3 +44,25 @@ D:\LẬP TRÌNH WEB\BAITAPLON\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.
 D:\LẬP TRÌNH WEB\BAITAPLON\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
 D:\LẬP TRÌNH WEB\BAITAPLON\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
 D:\LẬP TRÌNH WEB\BAITAPLON\DbTravel\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+C:\Users\ADMIN\Downloads\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.deps.json
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.dll
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\bin\Debug\net6.0\Shop.Domain.pdb
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfoInputs.cache
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.AssemblyInfo.cs
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.csproj.CoreCompileInputs.cache
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.dll
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\refint\Shop.Domain.dll
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\Shop.Domain.pdb
+D:\LẬP TRÌNH WEB\BAITAPLON\TOURDULICH\TOURDULICH\TOURDULICH\DbTravel\Shop.Domain\obj\Debug\net6.0\ref\Shop.Domain.dll

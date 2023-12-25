@@ -10,9 +10,10 @@ namespace Shop.Domain.Entities
     {
         public int ChiTietHoaDontId { get; set; }
         public int HoaDonId { get; set; }
-        public int SanPhamId { get; set; }
+        public int TourId { get; set; }
         public int SoLuong { get; set; }
+        public string Gia { get; set; }
         public HoaDon? HoaDon { get; set; }
-        public Tour? Tour { get; set; }
+        public Tour? Tour { get; set; } 
     }
 }
